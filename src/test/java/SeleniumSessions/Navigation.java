@@ -19,20 +19,31 @@ public class Navigation {
         //navigate().to() used to launch the external url
 
         driver.get("https://www.google.com");
+        System.out.println(driver.getTitle());
 
-        driver.navigate().to("https://www.amazon.com");
+        driver.get("https://www.amazon.com");
+        //driver.navigate().to("https://www.amazon.com");
+        System.out.println(driver.getTitle());
 
         //back and forward buttons simulation:
         driver.navigate().back();
+        System.out.println(driver.getTitle());
 
-        Thread.sleep(3000);
+        //Thread.sleep(3000);
 
         driver.navigate().forward();
+        System.out.println(driver.getTitle());
 
-        Thread.sleep(3000);
+        //Thread.sleep(3000);
 
         driver.navigate().back();
+        System.out.println(driver.getTitle());
 
         driver.navigate().refresh();
+        System.out.println(driver.getTitle());
+
+        //Thread.sleep(3000);
+
+        driver.quit();
     }
 }

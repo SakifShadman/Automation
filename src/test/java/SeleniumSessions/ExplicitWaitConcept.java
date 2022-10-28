@@ -35,7 +35,8 @@ public class ExplicitWaitConcept {
         locator.click();
     }*/
 
-    public static void explicitWait(WebDriver driver, By locator, int timeout) {
-       new WebDriverWait(driver, Duration.ofSeconds(timeout)).until(ExpectedConditions.elementToBeClickable(locator)).click();
+    public static void explicitWait(WebDriver driver, By locator, int duration) {
+       new WebDriverWait(driver, Duration.ofSeconds(duration))
+               .until(ExpectedConditions.elementToBeClickable(locator)).click();
     }
 }

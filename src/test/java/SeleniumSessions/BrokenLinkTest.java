@@ -65,7 +65,8 @@ public class BrokenLinkTest {
             connection.connect();
             String response = connection.getResponseMessage();
             connection.disconnect();
-            System.out.println(element.getAttribute("href") + "---> " + response);
+            System.out.println(element.getAttribute("href") + " ---> " + response);
         }
+        driver.quit();
     }
 }

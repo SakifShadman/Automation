@@ -8,8 +8,11 @@ public class SeleniumBasics {
     public static void main(String[] args) {
 
         //Chrome browser:
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver(); //launch chrome;
+        System.setProperty("webdriver.chrome.driver", "C:/Dev_tools/Driver/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+
+        //WebDriverManager.chromedriver().setup();
+        //WebDriver driver = new ChromeDriver(); //launch chrome;
 
         driver.get("http://www.google.com"); //enter url
 

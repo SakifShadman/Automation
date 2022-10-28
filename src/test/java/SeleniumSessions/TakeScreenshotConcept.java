@@ -20,9 +20,10 @@ public class TakeScreenshotConcept {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.get("https://www.google.com");
 
-        //Take screenshot and store as a file format
-        File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        //now copy the screenshot to desired location using copyFile/method
-        FileUtils.copyFile(src, new File("C:/Users/arnob/IdeaProjects/AutomationYoutube/src/test/java/SeleniumSessions/google.png"));
+        String path = "src/test/java/SeleniumSessions/";
+
+        File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        File destFile = new File(path + System.currentTimeMillis() + ".png");
+        FileUtils.copyFile(screenshot, destFile);
     }
 }

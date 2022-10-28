@@ -17,8 +17,7 @@ public class ReadPropFile {
 
         Properties prop = new Properties();
 
-        FileInputStream ip = new FileInputStream("C://Users//arnob//IdeaProjects//AutomationYoutube//src//test//java/SeleniumSessions//config.properties");
-
+        FileInputStream ip = new FileInputStream("src/test/java/SeleniumSessions/config.properties");
         prop.load(ip);
 
         System.out.println(prop.getProperty("name"));
