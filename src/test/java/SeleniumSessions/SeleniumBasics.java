@@ -3,13 +3,18 @@ package SeleniumSessions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class SeleniumBasics {
     public static void main(String[] args) {
 
         //Chrome browser:
-        System.setProperty("webdriver.chrome.driver", "C:/Dev_tools/Driver/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+//        System.setProperty("webdriver.chrome.driver", "C:/Dev_tools/Driver/chromedriver.exe");
+//        WebDriver driver = new ChromeDriver();
+
+        //Firefox browser:
+        System.setProperty("webdriver.gecko.driver", "C:/Dev_tools/Driver/geckodriver.exe");
+        WebDriver driver = new FirefoxDriver();
 
         //WebDriverManager.chromedriver().setup();
         //WebDriver driver = new ChromeDriver(); //launch chrome;

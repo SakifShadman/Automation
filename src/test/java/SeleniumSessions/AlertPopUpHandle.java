@@ -23,9 +23,8 @@ public class AlertPopUpHandle {
 
         Alert alert = driver.switchTo().alert();
 
-        System.out.println(alert.getText());
-
         String text = alert.getText();
+        System.out.println(text);
 
         //validation
         if (text.equals("You clicked a button")) {

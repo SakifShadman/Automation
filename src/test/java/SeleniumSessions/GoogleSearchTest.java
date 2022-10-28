@@ -21,7 +21,7 @@ public class GoogleSearchTest {
         driver.findElement(By.xpath("//input[@name='q']")).sendKeys("java");
 
         List<WebElement> list =
-                driver.findElements(By.xpath("//ul[@role='listbox']//li/descendant::div[@class='wM6W7d']"));
+                driver.findElements(By.xpath("//ul[@class='erkvQe']//li//div[@class='wM6W7d']"));
 
         System.out.println("total number of suggestions in search box:::===> " + list.size());
 

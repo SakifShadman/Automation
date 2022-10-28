@@ -17,5 +17,7 @@ public class HandleDropBox {
         //handle drop box:
         Select select = new Select(driver.findElement(By.id("monthly_avg_users")));
         select.selectByVisibleText("Under 50k");
+//        select.selectByIndex(2);
+//        select.selectByValue("");
     }
 }

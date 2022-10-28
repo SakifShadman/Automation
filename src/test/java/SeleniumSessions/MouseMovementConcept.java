@@ -3,6 +3,7 @@ package SeleniumSessions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -15,8 +16,10 @@ public class MouseMovementConcept {
         driver.manage().deleteAllCookies();
         driver.get("https://www.spicejet.com/"); //enter url
 
+        WebElement element = driver.findElement(By.xpath("//div[contains(text(),'Add-ons')]"));
+
         Actions action = new Actions(driver);
-        action.moveToElement(driver.findElement(By.xpath("//div[contains(text(),'Add-ons')]"))).build().perform();
+        action.moveToElement(element).build().perform();
 
         Thread.sleep(3000);
 

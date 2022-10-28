@@ -47,5 +47,8 @@ public class LocatorConcept {
 
         //7. class name: not useful
         //driver.findElement(By.className("inlong")).sendKeys("5.005");
+
+        //8. tag name:\
+        driver.findElements(By.tagName("a"));
     }
 }

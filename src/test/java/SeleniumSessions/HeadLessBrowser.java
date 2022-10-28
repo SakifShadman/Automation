@@ -15,9 +15,6 @@ import java.time.Duration;
 public class HeadLessBrowser {
     public static void main(String[] args) throws InterruptedException {
 
-        //WebDriverManager.chromedriver().setup();
-        //WebDriver driver = new ChromeDriver();
-
         //html unit driver is not available in Selenium
         //html unit driver -- to use this concept, we have to add it dependency in our pom.xml
 
